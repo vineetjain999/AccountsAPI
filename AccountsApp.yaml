@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: accountsapi
+  labels:
+    app: accountsapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: accountsapi
+  template:
+    metadata:
+      labels:
+        app: accountsapi
+    spec:
+      containers:
+      - name: accountsapi
+        image: vineetjain999/accountsapi:latest 
+        env:
+        - name: MONGODB_HOST
+          value: mongodb
+        ports:
+        - containerPort: 8202
