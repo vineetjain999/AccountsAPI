@@ -21,4 +21,5 @@ spec:
         - name: MONGODB_HOST
           value: mongodb
         ports:
-        - containerPort: 8202
+        - name: accountsapi-port
+          containerPort: 8202
