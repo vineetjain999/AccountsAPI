@@ -11,5 +11,5 @@ spec:
   capacity:
     storage: 1Gi
   hostPath:
-    path: /data/mongo1
+    path: /tmp/test
     type: DirectoryOrCreate

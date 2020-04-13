@@ -22,7 +22,7 @@ spec:
         - containerPort: 27017              
         volumeMounts:
         - name: hostvol
-          mountPath: /data/db
+          mountPath: /tmp/test
       volumes:
       - name: hostvol
         persistentVolumeClaim:
